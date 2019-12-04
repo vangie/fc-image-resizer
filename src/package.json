@@ -1,0 +1,27 @@
+{
+  "name": "fc-image-resizer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "imagemagick": "^0.1.3",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/imagemagick": "0.0.30"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vangie Du",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vangie/fc-image-resizer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vangie/fc-image-resizer/issues"
+  },
+  "homepage": "https://github.com/vangie/fc-image-resizer#readme",
+  "description": ""
+}
