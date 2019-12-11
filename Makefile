@@ -23,5 +23,8 @@ build: install package
 publish: build
 	cd $(dist); fcat publish 
 
+publish-prod: build
+	cd $(dist); fcat publish -p
+
 unpublish: 
 	fcat delete $(publish_name)
