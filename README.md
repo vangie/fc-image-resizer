@@ -1,33 +1,36 @@
-# Serverless 图片转换工具
+# 快速搭建 Serverless 在线图片处理应用
 
 ## 前言
 
 首先介绍下在本文出现的几个比较重要的概念：
 
-> **函数计算（Function Compute）**：函数计算是一个事件驱动的服务，通过函数计算，用户无需管理服务器等运行情况，只需编写代码并上传。函数计算准备计算资源，并以弹性伸缩的方式运行用户代码，而用户只需根据实际代码运行所消耗的资源进行付费。l函数计算更多信息[参考](https://help.aliyun.com/product/50980.html)。
-> **ImageMagick**：ImageMagick是一个用于查看、编辑位图文件以及进行图像格式转换的开放源代码[1]软件套装。它可以读取、编辑超过100种图象格式。。参见维基百科[词条](https://zh.wikipedia.org/wiki/ImageMagick)
+> **函数计算（Function Compute）**：函数计算是一个事件驱动的服务，通过函数计算，用户无需管理服务器等运行情况，只需编写代码并上传。函数计算准备计算资源，并以弹性伸缩的方式运行用户代码，而用户只需根据实际代码运行所消耗的资源进行付费。函数计算更多信息[参考](https://help.aliyun.com/product/50980.html)。
+> **ImageMagick**：ImageMagick 是一个用于查看、编辑位图文件以及进行图像格式转换的开放源代码软件套装。它可以读取、编辑超过100种图象格式。。参见维基百科[词条](https://zh.wikipedia.org/wiki/ImageMagick)
+
+![](https://data-analysis
+.cn-shanghai.log.aliyuncs.com/logstores/article-logs/track_ua.gif?APIVersion=0.6.0&title=%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%20Serverless%20%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E5%BA%94%E7%94%A8&src=article&author=%E5%80%9A%E8%B4%A4)
 
 ## 快速开始
 
 下面我们借助于函数计算的应用中心，快速地将图片转换服务给部署出来。
 
-1. 打开函数计算 [Image Resizer 应用详情页](https://fc.console.aliyun.com/fc/applications/cn-shanghai/template/Image-Resizer#intro)。如果您尚未开通函数计算服务可能需要先开通服务，开通服务是免费的，另外函数计算有每月免费额度，试用服务不会产生费用。
+1. 打开函数计算 [Image Resizer 应用详情页](https://statistics.functioncompute.com/?title=%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%20Serverless%20%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E5%BA%94%E7%94%A8&src=article&author=%E5%80%9A%E8%B4%A4&url=https%3A%2F%2Ffc.console.aliyun.com%2Ffc%2Fapplications%2Fcn-shanghai%2Ftemplate%2FImage-Resizer%23intro)。如果您尚未开通函数计算服务可能需要先，开通服务是免费的，另外函数计算有每月免费额度，试用服务不会产生费用。
 
     ![1576055536110-8a8eb2d2-1bf3-4b29-81f9-d9e65d8e2302.png](https://i.loli.net/2019/12/11/O38RLZyUjNqpYcD.png)
 
-2. 滚动到[Image Resizer 应用详情页](https://fc.console.aliyun.com/fc/applications/cn-shanghai/template/Image-Resizer#intro)的最底部，点击“立即部署”按钮。
+1. 滚动到[Image Resizer 应用详情页](https://statistics.functioncompute.com/?title=%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%20Serverless%20%E5%9C%A8%E7%BA%BF%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86%E5%BA%94%E7%94%A8&src=article&author=%E5%80%9A%E8%B4%A4&url=https%3A%2F%2Ffc.console.aliyun.com%2Ffc%2Fapplications%2Fcn-shanghai%2Ftemplate%2FImage-Resizer%23intro)的最底部，点击“立即部署”按钮。
 
     ![74C59B41-B64B-4102-86A9-2E53460FC599.png](https://i.loli.net/2019/12/11/SawH8Cum7d12sov.png)
 
-3. 填写应用名称：`my-image-resizer`，然后点击“部署”按钮。
+2. 填写应用名称：`my-image-resizer`，然后点击“部署”按钮。
 
     ![00FCA92D-FA89-4D3E-9C35-0E3AB3EBF860.png](https://i.loli.net/2019/12/11/hgGADHKePvbsoFR.png)
 
-4. 拷贝 HttpTriggerEndpoint 里的网址。
+3. 拷贝 HttpTriggerEndpoint 里的网址。
 
     ![20191211160652.jpg](https://i.loli.net/2019/12/11/lKw2JXou4dQR3xz.jpg)
 
-5. 在浏览器里打开上面的网址，或者通过 curl 进行调用。注意：由于没有绑定域名，所以应用中心会默认下载而不是直接在浏览器里打开图片。
+4. 在浏览器里打开上面的网址，或者通过 curl 进行调用。注意：由于没有绑定域名，所以应用中心会默认下载而不是直接在浏览器里打开图片。
 
     ```bash
     curl 'https://xxxxx.cn-shanghai.fc.aliyuncs.com/2016-08-15/proxy/my-image-resizer-ResizeService-5A40B5A8B981/my-image-resizer-ResizeFunction-3E71C57C0094/' --output resized.jpg
