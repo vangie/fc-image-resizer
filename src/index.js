@@ -6,7 +6,7 @@ const { resize } = require('./image');
 
 module.exports.handler = async function (req, resp, context) {
     const {
-        url = 'https://file01.dysucai.com/d/file/lan20191114/51ognjplyhl.jpg',
+        url = 'https://dev-fc-application-template-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/Image-Resizer/example.png',
         width = 200,
         height
     } = req.queries;
