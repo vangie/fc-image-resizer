@@ -12,8 +12,8 @@
 下面我们借助于函数计算的应用中心，快速地将图片转换服务给部署出来。
 
 1. 打开函数计算 [Image Resizer 应用详情页](https://fc.console.aliyun.com/fc/applications/cn-shanghai/template/Image-Resizer#intro)。如果您尚未开通函数计算服务可能需要先开通服务，开通服务是免费的，另外函数计算有每月免费额度，试用服务不会产生费用。
-   
-	![dd83cc6079fe0d808788080cdd1b4a70cd3f8dea.png](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/95058/1576055536110-8a8eb2d2-1bf3-4b29-81f9-d9e65d8e2302.png) 
+
+    ![1576055536110-8a8eb2d2-1bf3-4b29-81f9-d9e65d8e2302.png](https://i.loli.net/2019/12/11/O38RLZyUjNqpYcD.png)
 
 2. 滚动到[Image Resizer 应用详情页](https://fc.console.aliyun.com/fc/applications/cn-shanghai/template/Image-Resizer#intro)的最底部，点击“立即部署”按钮。
 	
