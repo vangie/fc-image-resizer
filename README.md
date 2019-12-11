@@ -13,18 +13,19 @@
 
 1. 打开函数计算 [Image Resizer 应用详情页](https://fc.console.aliyun.com/fc/applications/cn-shanghai/template/Image-Resizer#intro)。如果您尚未开通函数计算服务可能需要先开通服务，开通服务是免费的，另外函数计算有每月免费额度，试用服务不会产生费用。
    
-   ![image](https://yqfile.alicdn.com/dd83cc6079fe0d808788080cdd1b4a70cd3f8dea.png)
+	![dd83cc6079fe0d808788080cdd1b4a70cd3f8dea.png](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/95058/1576055536110-8a8eb2d2-1bf3-4b29-81f9-d9e65d8e2302.png) 
 
 2. 滚动到[Image Resizer 应用详情页](https://fc.console.aliyun.com/fc/applications/cn-shanghai/template/Image-Resizer#intro)的最底部，点击“立即部署”按钮。
-
-    ![74C59B41_B64B_4102_86A9_2E53460FC599](https://yqfile.alicdn.com/e8e0b28002ddca899419c394535af0a761b0f392.png)
+	
+	![74C59B41-B64B-4102-86A9-2E53460FC599.png](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/95058/1576055420755-a3d9d127-7fcb-47bf-9bf5-c679cd550463.png) 
 
 3. 填写应用名称：`my-image-resizer`，然后点击“部署”按钮。
 
-    ![00FCA92D_FA89_4D3E_9C35_0E3AB3EBF860](https://yqfile.alicdn.com/6311e1655d5bc54529745cadcce7552d5b7e0e18.png)
+	![00FCA92D-FA89-4D3E-9C35-0E3AB3EBF860.png](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/95058/1576055436319-2b87bc9c-312d-4315-8b91-8290bd194f8c.png) 
 
 4. 拷贝 HttpTriggerEndpoint 里的网址。
-    ![20191211160652](https://yqfile.alicdn.com/b3e7a066ef61fe19e22e5ab65c477d1f71813561.jpeg)
+
+	![20191211160652.jpg](https://intranetproxy.alipay.com/skylark/lark/0/2019/jpeg/95058/1576055451978-2ea54912-855c-4bd8-83db-6dcec8041027.jpeg) 
 
 5. 在浏览器里打开上面的网址，或者通过 curl 进行调用。注意：由于没有绑定域名，所以应用中心会默认下载而不是直接在浏览器里打开图片。
 
@@ -52,7 +53,7 @@ FC 函数接受到 HTTP 请求之后，执行如下三个步骤：
 
 上面我们通过了函数计算的应用中心快速上线了一个图片转换的服务。函数计算是按照调用次数收费的，所以上述服务即使保持在线也不会产生费用。而又因为函数计算每月有免费的额度，所以日常开发的调用也不会产生费用。
 
-## 本地二次开发
+## 二次开发
 
 ### 依赖工具
 
@@ -121,7 +122,7 @@ fun deploy
 
 为了获得更好的开发体验，建议安装 [Aliyun Serverless VSCode Extension](https://marketplace.visualstudio.com/items?itemName=aliyun.aliyun-serverless)
 
-## 参考阅读
+## 参考链接
 
 1. [Funcraft](https://github.com/alibaba/funcraft)
 2. [Aliyun Serverless VSCode Extension](https://github.com/alibaba/serverless-vscode)
