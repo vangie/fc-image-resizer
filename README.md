@@ -16,16 +16,16 @@
     ![1576055536110-8a8eb2d2-1bf3-4b29-81f9-d9e65d8e2302.png](https://i.loli.net/2019/12/11/O38RLZyUjNqpYcD.png)
 
 2. 滚动到[Image Resizer 应用详情页](https://fc.console.aliyun.com/fc/applications/cn-shanghai/template/Image-Resizer#intro)的最底部，点击“立即部署”按钮。
-	
-	![74C59B41-B64B-4102-86A9-2E53460FC599.png](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/95058/1576055420755-a3d9d127-7fcb-47bf-9bf5-c679cd550463.png) 
+
+    ![74C59B41-B64B-4102-86A9-2E53460FC599.png](https://i.loli.net/2019/12/11/SawH8Cum7d12sov.png)
 
 3. 填写应用名称：`my-image-resizer`，然后点击“部署”按钮。
 
-	![00FCA92D-FA89-4D3E-9C35-0E3AB3EBF860.png](https://intranetproxy.alipay.com/skylark/lark/0/2019/png/95058/1576055436319-2b87bc9c-312d-4315-8b91-8290bd194f8c.png) 
+    ![00FCA92D-FA89-4D3E-9C35-0E3AB3EBF860.png](https://i.loli.net/2019/12/11/hgGADHKePvbsoFR.png)
 
 4. 拷贝 HttpTriggerEndpoint 里的网址。
 
-	![20191211160652.jpg](https://intranetproxy.alipay.com/skylark/lark/0/2019/jpeg/95058/1576055451978-2ea54912-855c-4bd8-83db-6dcec8041027.jpeg) 
+    ![20191211160652.jpg](https://i.loli.net/2019/12/11/lKw2JXou4dQR3xz.jpg)
 
 5. 在浏览器里打开上面的网址，或者通过 curl 进行调用。注意：由于没有绑定域名，所以应用中心会默认下载而不是直接在浏览器里打开图片。
 
