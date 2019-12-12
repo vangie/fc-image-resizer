@@ -51,7 +51,7 @@ ImageMagick 是图片处理的利器，借助 ImageMagick 可以轻松实现图�
 
 该应用的架构图如下：
 
-![_001_jpeg](https://yqfile.alicdn.com/3bb06af5d6162bba4669928687d6afd5a56433b5.jpeg)
+![](https://img.alicdn.com/tfs/TB1Z9fHqX67gK0jSZPfXXahhFXa-1920-1080.jpg)
 
 FC 函数接受到 HTTP 请求之后，执行如下三个步骤：
 
